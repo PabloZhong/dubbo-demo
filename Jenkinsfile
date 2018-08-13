@@ -50,11 +50,11 @@ podTemplate(name: 'jnlp', label: 'jnlp', namespace: 'default', cloud: 'kubernete
                 """
             }
             
-            stage('Deploy app to EKS') {
+            //stage('Deploy app to EKS') {
                 //请按需修改Deployment名称和dubbo-demo-provider、dubbo-demo-consumer的镜像名称
-                sh """kubectl set image deployment/dubbo-demo-provider dubbo-demo-jar=hub.easystack.io/3dc70621b8504c98/dubbo-provider:v${BUILD_NUMBER}"""
-                sh """kubectl set image deployment/dubbo-demo-consumer dubbo-demo-jar=hub.easystack.io/3dc70621b8504c98/dubbo-consumer:v${BUILD_NUMBER}"""
-            }
+                //sh """kubectl set image deployment/dubbo-demo-provider dubbo-demo-jar=hub.easystack.io/3dc70621b8504c98/dubbo-provider:v${BUILD_NUMBER}"""
+                //sh """kubectl set image deployment/dubbo-demo-consumer dubbo-demo-jar=hub.easystack.io/3dc70621b8504c98/dubbo-consumer:v${BUILD_NUMBER}"""
+            //}
         }
     }
  }
